@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.title{
+  color: white;
+  animation: colorchange 1s;
+  color: white;
+  margin-top: 0px;
+  font-size: 3vw;
+  text-align: center;
+  font-weight: bolder;
+}
+.app {
+  /* background-image: url('./Images/Cold\ Weather.jpg'); */
+  background: #000;
+  background-size: cover;
+  background-position: center;
+  transition: 3s ease;
+  /* animation: colorchange 1s; */
+}
+
+main {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+  padding: 2% 8%;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.search-box .search-bar {
+  /* display: block; */
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 48px 48px 48px 48px;
+  margin-top: -25px;
+  box-shadow: 4px 4px rgba(37, 37, 37, 0);
+  color: #313131;
+  font-size: 20px;
+  /* transition: width 0.3s linear 1s; */
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.924); 
+}
+
+.Box{
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  padding: 2%;
+  border: 1px solid white;
+}
+.location-box{
+  font-size: 25px ;
+  font-weight: bold;
+  text-align: center;
+}
+.error{
+  color: white;
+  font-size:large;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: capitalize;
+}
+@keyframes colorchange {
+  0% {
+    
+    color: transparent;
+    margin-top: 80px;
+    /* visibility: visible; */
+  }
+  100% {
+    color: white;
+    margin-top: -5px;
+    /* visibility:hidden; */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app{
+    padding: 5% 0;
+  }
+  .title {
+    font-size: 25px;
+    color: white;
+  }
+  .search-box{
+    margin: 5vh 0;
+  }
+  .weather-box{
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app{
+    padding: 8% 0;
+  }
+  .title {
+    font-size: 20px;
+    color: white;
+  }
+  .search-box{
+    margin: 5vh 0;
+  }
+  .weather-box{
+    margin: 10px auto;
+  }
+}
